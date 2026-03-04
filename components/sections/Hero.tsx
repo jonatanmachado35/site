@@ -84,7 +84,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("cases")}
-                className="border-white/20 text-white hover:bg-white/10 rounded-full font-semibold px-6 py-4 h-auto"
+                className="border-white/20 text-white hover:bg-white/10 rounded-full font-semibold px-6 py-4 h-auto hover:scale-105 active:scale-95 transition-all duration-200"
               >
                 Ver cases
               </Button>
