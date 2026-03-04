@@ -60,12 +60,12 @@ export default function CtaFinal() {
             <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
             Sem burocracia
           </span>
-          <span className="hidden sm:inline text-white/30">•</span>
+          <span className="hidden sm:inline text-white/30 mx-2">•</span>
           <span className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
             Resposta rápida
           </span>
-          <span className="hidden sm:inline text-white/30">•</span>
+          <span className="hidden sm:inline text-white/30 mx-2">•</span>
           <span className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
             Gratuito
