@@ -73,7 +73,7 @@ export default function Hero() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center w-full sm:w-auto">
               <Button
                 onClick={() => scrollToSection("contato")}
                 className="group relative bg-[hsl(172_85%_45%)] hover:bg-[hsl(172_85%_55%)] text-[#050508] font-bold text-lg py-4 px-8 h-auto rounded-full hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_0_40px_hsl(172_85%_45%/0.35)]"
@@ -84,7 +84,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("cases")}
-                className="border-white/20 text-white hover:bg-white/10 rounded-full font-semibold px-6 py-4 h-auto hover:scale-105 active:scale-95 transition-all duration-200"
+                className="border-white/20 text-white hover:bg-white/10 rounded-full font-semibold px-6 py-4 h-auto hover:scale-105 active:scale-95 transition-all duration-200 whitespace-nowrap sm:ml-2"
               >
                 Ver cases
               </Button>

@@ -55,21 +55,8 @@ export default function CtaFinal() {
         </Button>
 
         {/* Microcopy */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mt-10 text-sm text-white/50">
-          <span className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
-            Sem burocracia
-          </span>
-          <span className="hidden sm:inline text-white/30 mx-2">•</span>
-          <span className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
-            Resposta rápida
-          </span>
-          <span className="hidden sm:inline text-white/30 mx-2">•</span>
-          <span className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
-            Gratuito
-          </span>
+        <div className="mt-10 text-sm text-white/50">
+          Sem burocracia • Resposta rápida • Gratuito
         </div>
       </div>
     </section>
