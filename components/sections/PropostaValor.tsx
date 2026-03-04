@@ -7,23 +7,23 @@ const items = [
   {
     number: "01",
     icon: Bot,
-    title: "IA no Processo",
+    title: "Menos tarefas manuais e retrabalho",
     description:
-      "Usamos IA para acelerar desenvolvimento, testes e documentação. Cada linha de código é revisada por inteligência artificial.",
+      "Automatizamos rotinas para tirar o peso operacional do seu time.",
   },
   {
     number: "02",
     icon: Zap,
-    title: "Automação Real",
+    title: "Processos mais rápidos e previsíveis",
     description:
-      "Eliminamos tarefas repetitivas com fluxos inteligentes. Seus times focam no que realmente importa.",
+      "Fluxos padronizados deixam sua operação estável e eficiente.",
   },
   {
     number: "03",
     icon: BarChart3,
-    title: "Resultado Mensurável",
+    title: "Visibilidade com indicadores claros (ROI)",
     description:
-      "Cada projeto tem KPIs claros e acompanhamento de impacto. Você vê o ROI, não só o produto.",
+      "Acompanhe o impacto com métricas simples e objetivas.",
   },
 ];
 
@@ -41,14 +41,13 @@ export default function PropostaValor() {
           className="text-center font-black leading-[1.05] text-white mb-5"
           style={{ fontSize: "clamp(2.5rem, 5vw, 3.75rem)" }}
         >
-          Não somos uma agência comum.{" "}
-          <span className="text-gradient-white">Somos IA First.</span>
+          IA First de verdade, com impacto mensurável
         </h2>
 
         {/* Subtitle */}
         <p className="text-center text-xl text-white/70 max-w-2xl mx-auto mb-16 leading-relaxed">
-          Isso significa que em cada projeto, usamos inteligência artificial
-          para entregar mais rápido, com mais qualidade e menor custo.
+          Usamos IA para acelerar desenvolvimento, reduzir erros e gerar
+          resultados que aparecem no dia a dia da sua operação.
         </p>
 
         {/* Grid 3 colunas */}

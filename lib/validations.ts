@@ -2,9 +2,8 @@ import { z } from "zod";
 
 export const contactSchema = z.object({
   nome: z.string().min(2, "Nome obrigatório"),
-  email: z.string().email("Email inválido"),
-  whatsapp: z.string().min(10, "WhatsApp obrigatório"),
-  tipoProjeto: z.string().min(1, "Selecione o tipo de projeto"),
+  contato: z.string().min(5, "WhatsApp ou Email obrigatório"),
+  processo: z.string().min(3, "Informe o processo a ser automatizado"),
   mensagem: z.string().optional(),
 });
 

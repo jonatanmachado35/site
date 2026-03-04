@@ -57,18 +57,19 @@ export default function Hero() {
               style={{ fontSize: "clamp(3.5rem, 8vw, 6rem)" }}
             >
               <span className="text-gradient-white">
-                Sua empresa
+                Automatize processos e
                 <br />
-                opera com
+                melhore seus sistemas
               </span>
               <br />
-              <span className="text-gradient-accent">inteligência.</span>
+              <span className="text-gradient-accent">com IA sob medida</span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-white/70 text-xl leading-relaxed max-w-lg">
-              Desenvolvemos software personalizado e automações com IA para
-              empresas que querem crescer sem contratar mais gente.
+              Criamos automações e software personalizado para PMEs reduzirem
+              trabalho manual e ganharem eficiência — sem precisar aumentar
+              equipe.
             </p>
 
             {/* Single CTA */}
@@ -77,10 +78,14 @@ export default function Hero() {
                 onClick={() => scrollToSection("contato")}
                 className="group relative bg-[hsl(172_85%_45%)] hover:bg-[hsl(172_85%_55%)] text-[#050508] font-bold text-lg py-4 px-8 h-auto rounded-full hover:scale-105 active:scale-95 transition-all duration-300 overflow-hidden shadow-[inset_0_-2px_4px_rgba(0,0,0,0.2),_0_0_40px_hsl(172_85%_45%/0.35)]"
               >
-                Falar com especialista
+                Agendar diagnóstico gratuito
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
+
+            <p className="text-white/50 text-sm">
+              Resposta em até 24h • Sem compromisso
+            </p>
 
             {/* Stats — horizontal com separadores */}
             <div className="flex items-center gap-6 pt-6 border-t border-[hsl(172_85%_45%/0.2)]">

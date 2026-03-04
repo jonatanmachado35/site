@@ -5,21 +5,21 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const steps = [
   {
     number: "01",
-    title: "Diagnóstico Gratuito",
+    title: "Diagnóstico gratuito",
     description:
-      "Entendemos seu negócio e mapeamos as oportunidades com IA.",
+      "Entendemos seu processo atual, dores e impacto financeiro.",
   },
   {
     number: "02",
-    title: "Desenvolvimento Ágil",
+    title: "Plano de automação",
     description:
-      "Sprints curtos, entregas frequentes e comunicação transparente.",
+      "Definimos o que será automatizado e o ganho esperado.",
   },
   {
     number: "03",
-    title: "Entrega e Suporte",
+    title: "Entrega e acompanhamento",
     description:
-      "Deploy, treinamento e suporte contínuo. Você acompanha tudo em tempo real.",
+      "Implementamos, treinamos seu time e monitoramos resultados.",
   },
 ];
 
@@ -74,19 +74,19 @@ export default function Processo() {
             ))}
           </div>
 
-          {/* Card de impacto */}
-          <div className="glass-panel rounded-2xl p-8 flex flex-col items-center text-center justify-center">
-            <p
-              className="font-black text-[hsl(172_85%_45%)] leading-none mb-3"
-              style={{ fontSize: "5rem" }}
-            >
-              95%
-            </p>
-            <p className="text-white/60 leading-relaxed text-base">
-              dos nossos clientes voltam
+            {/* Card de impacto */}
+            <div className="glass-panel rounded-2xl p-8 flex flex-col items-center text-center justify-center">
+              <p
+                className="font-black text-[hsl(172_85%_45%)] leading-none mb-3"
+                style={{ fontSize: "5rem" }}
+              >
+                95%
+              </p>
+              <p className="text-white/60 leading-relaxed text-base">
+              dos clientes voltam
               <br />
               para novos projetos
-            </p>
+              </p>
 
             {/* Linha decorativa */}
             <div className="w-12 h-px bg-[hsl(172_85%_45%/0.4)] my-6" />

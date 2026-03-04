@@ -36,13 +36,13 @@ export default function CtaFinal() {
           className="font-black leading-[1.0] text-white mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
         >
-          Pronto para transformar
+          Pronto para automatizar
           <br />
-          <span className="text-gradient-accent">seu negócio com IA?</span>
+          <span className="text-gradient-accent">e ganhar eficiência?</span>
         </h2>
         <p className="text-white/60 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-          Fale com um especialista hoje. A primeira conversa é gratuita e sem
-          compromisso.
+          Fale com um especialista. A primeira conversa é gratuita e em até 24h
+          você recebe um plano inicial.
         </p>
 
         <Button
@@ -50,13 +50,13 @@ export default function CtaFinal() {
           onClick={() => scrollToSection("contato")}
           className="bg-[hsl(172_85%_45%)] hover:bg-[hsl(172_85%_40%)] text-[hsl(240_15%_9%)] font-bold text-lg py-5 px-10 h-auto hover:scale-105 active:scale-95 transition-all duration-200 shadow-[0_0_60px_hsl(172_85%_45%/0.5)]"
         >
-          Começar agora
+          Agendar diagnóstico gratuito
           <ArrowRight className="w-5 h-5 ml-2" />
         </Button>
 
         {/* Microcopy */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-10 text-sm text-white/50">
-          {["Resposta em até 24h", "Sem burocracia", "Gratuito"].map((item) => (
+          {["Sem burocracia", "Resposta rápida", "Gratuito"].map((item) => (
             <span key={item} className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-[hsl(172_85%_45%)]" />
               {item}

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 const cases = [
   {
     sector: "Clínica de odontologia",
-    title: "Fluxo de atendimento inteligente",
+    title: "Atendimento automatizado e menos retrabalho",
     description:
       "Simplificamos o fluxo de atendimento e eliminamos tarefas repetitivas de busca, confirmação e reagendamento. A equipe passou a focar no paciente com muito mais eficiência no dia a dia.",
     results: [
@@ -18,7 +18,7 @@ const cases = [
   },
   {
     sector: "Aluguel de casas por temporada",
-    title: "Gestão de locação transparente",
+    title: "Gestão de locação clara e integrada",
     description:
       "Unificamos o processo de locação em um fluxo simples e descentralizado, dando mais visibilidade a todas as etapas. A gestão ficou clara para proprietários e operadores.",
     results: [
@@ -29,7 +29,7 @@ const cases = [
   },
   {
     sector: "Controle financeiro",
-    title: "Portal + assistente via WhatsApp",
+    title: "Portal + assistente no WhatsApp",
     description:
       "Criamos um portal com informações e gráficos centralizados e integrados a um assistente conversacional via WhatsApp. Assim, o registro de gastos ficou rápido e acessível.",
     results: [
@@ -162,7 +162,7 @@ export default function Cases() {
             onClick={() => scrollToSection("contato")}
             className="bg-[hsl(172_85%_45%)] hover:bg-[hsl(172_85%_40%)] text-[hsl(240_15%_9%)] font-bold text-base sm:text-lg py-5 px-10 h-auto hover:scale-105 active:scale-95 transition-all duration-200 shadow-[0_0_40px_hsl(172_85%_45%/0.35)]"
           >
-            Falar com especialista
+            Agendar diagnóstico gratuito
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </div>

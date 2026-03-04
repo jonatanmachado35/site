@@ -8,27 +8,9 @@ import { Loader2, Mail, Phone, MapPin, MessageCircle, ArrowRight, Bot, Sparkles 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { contactSchema, type ContactFormData } from "@/lib/validations";
 import { sendContactForm } from "@/services/api";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-
-const tipoProjetoOptions = [
-  "Inteligência Artificial",
-  "Sistemas Web & Mobile",
-  "Automações",
-  "Aplicativo Mobile",
-  "Nuvem",
-  "Consultoria",
-  "Não sei ainda",
-];
 
 export default function Contato() {
   const router = useRouter();
@@ -37,14 +19,10 @@ export default function Contato() {
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
-
-  const tipoProjeto = watch("tipoProjeto");
 
   const onSubmit = async (data: ContactFormData) => {
     try {
@@ -74,27 +52,27 @@ export default function Contato() {
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[hsl(172_85%_45%)]/10 text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%)]/20 mb-6">
             <Sparkles className="w-3.5 h-3.5 mr-2" />
-            Contato VIP
+            Vamos entender seu desafio
           </span>
           <h2
             className="font-bold leading-[1.1] text-white"
             style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
           >
-            Vamos Iniciar a Transformação
+            Vamos entender seu desafio
           </h2>
           <p className="mt-6 text-white/60 max-w-2xl mx-auto text-lg leading-relaxed">
-            Preencha o formulário abaixo e nossa equipe de especialistas em Inteligência Artificial analisará seu desafio.
+            Preencha o formulário abaixo para receber um diagnóstico inicial.
           </p>
         </div>
 
         {/* Glass Panel */}
-        <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+            <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
+              <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             
             {/* Form — 2/3 */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-                {/* Nome + Email */}
+                {/* Nome + Contato */}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <Label htmlFor="nome" className="text-white/70 font-medium">
@@ -115,94 +93,43 @@ export default function Contato() {
                     )}
                   </div>
                   <div className="space-y-3">
-                    <Label htmlFor="email" className="text-white/70 font-medium">
-                      Email Corporativo <span className="text-[hsl(172_85%_45%)]">*</span>
+                    <Label htmlFor="contato" className="text-white/70 font-medium">
+                      WhatsApp ou Email <span className="text-[hsl(172_85%_45%)]">*</span>
                     </Label>
                     <Input
-                      id="email"
-                      type="email"
-                      placeholder="seu@email.com"
-                      {...register("email")}
+                      id="contato"
+                      placeholder="WhatsApp ou email"
+                      {...register("contato")}
                       className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.email ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        errors.contato ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
                       }`}
                     />
-                    {errors.email && (
+                    {errors.contato && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
-                        {errors.email.message}
+                        {errors.contato.message}
                       </p>
                     )}
                   </div>
                 </div>
 
-                {/* WhatsApp + Tipo */}
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-3">
-                    <Label htmlFor="whatsapp" className="text-white/70 font-medium">
-                      WhatsApp <span className="text-[hsl(172_85%_45%)]">*</span>
-                    </Label>
-                    <Input
-                      id="whatsapp"
-                      placeholder="+55 (51) 99999-9999"
-                      {...register("whatsapp")}
-                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.whatsapp ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                      }`}
-                    />
-                    {errors.whatsapp && (
-                      <p className="text-red-400 text-xs mt-1 font-medium">
-                        {errors.whatsapp.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="space-y-3">
-                    <Label htmlFor="tipoProjeto" className="text-white/70 font-medium">
-                      Tipo de Projeto <span className="text-[hsl(172_85%_45%)]">*</span>
-                    </Label>
-                    <Select
-                      value={tipoProjeto}
-                      onValueChange={(val) => setValue("tipoProjeto", val)}
-                    >
-                      <SelectTrigger
-                        id="tipoProjeto"
-                        className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:ring-[hsl(172_85%_45%)] focus:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                          errors.tipoProjeto ? "border-red-500 focus:ring-red-500 focus:border-red-500" : ""
-                        }`}
-                      >
-                        <SelectValue placeholder="Selecione..." />
-                      </SelectTrigger>
-                      <SelectContent className="bg-[#101018] border-white/10 text-white">
-                        {tipoProjetoOptions.map((opt) => (
-                          <SelectItem 
-                            key={opt} 
-                            value={opt} 
-                            className="focus:bg-white/10 focus:text-white cursor-pointer py-2.5"
-                          >
-                            {opt}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    {errors.tipoProjeto && (
-                      <p className="text-red-400 text-xs mt-1 font-medium">
-                        {errors.tipoProjeto.message}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Mensagem */}
+                {/* Processo */}
                 <div className="space-y-3">
-                  <Label htmlFor="mensagem" className="text-white/70 font-medium">
-                    Mensagem <span className="text-white/30">(opcional)</span>
+                  <Label htmlFor="processo" className="text-white/70 font-medium">
+                    Qual processo você quer automatizar?
                   </Label>
-                  <Textarea
-                    id="mensagem"
-                    placeholder="Conte um pouco sobre seu projeto ou dúvida..."
-                    rows={4}
-                    {...register("mensagem")}
-                    className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl resize-none min-h-[140px] p-4 text-base"
+                  <Input
+                    id="processo"
+                    placeholder="Ex: atendimento, financeiro, suporte..."
+                    {...register("processo")}
+                    className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
+                      errors.processo ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                    }`}
                   />
+                  {errors.processo && (
+                    <p className="text-red-400 text-xs mt-1 font-medium">
+                      {errors.processo.message}
+                    </p>
+                  )}
                 </div>
 
                 {/* Submit */}
@@ -219,11 +146,14 @@ export default function Contato() {
                       </>
                     ) : (
                       <>
-                        Enviar Mensagem
+                        Enviar e receber diagnóstico
                         <ArrowRight className="w-5 h-5 ml-3" />
                       </>
                     )}
                   </Button>
+                  <p className="text-white/50 text-xs mt-3 text-center">
+                    Retorno em menos de 24h
+                  </p>
                 </div>
               </form>
             </div>
@@ -283,10 +213,10 @@ export default function Contato() {
                     <Bot className="w-6 h-6 text-[hsl(172_85%_45%)]" />
                   </div>
                   <h4 className="text-xl font-bold text-white mb-3">
-                    Resposta Rápida
+                    Resposta rápida
                   </h4>
                   <p className="text-sm text-white/70 leading-relaxed mb-6">
-                    Nossos especialistas em IA analisarão sua solicitação e retornarão com um plano de ação em <strong className="text-white">menos de 24 horas</strong>.
+                    Retorno em menos de <strong className="text-white">24h</strong>.
                   </p>
                   <a
                     href="https://wa.me/5551991334348"

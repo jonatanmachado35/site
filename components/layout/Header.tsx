@@ -88,7 +88,7 @@ export default function Header() {
               className="bg-white/5 border border-white/10 text-white hover:bg-white/10 rounded-full font-semibold px-5 hover:scale-105 active:scale-95 transition-all duration-200"
             >
               <Sparkles className="w-4 h-4 mr-2" />
-              Falar com especialista
+              Agendar diagnóstico gratuito
             </Button>
           </div>
 
@@ -136,7 +136,7 @@ export default function Header() {
                     className="w-full bg-white/5 border border-white/10 text-white hover:bg-white/10 rounded-full font-semibold"
                   >
                     <Sparkles className="w-4 h-4 mr-2" />
-                    Falar com especialista
+                    Agendar diagnóstico gratuito
                   </Button>
                 </div>
               </nav>

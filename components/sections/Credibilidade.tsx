@@ -17,7 +17,7 @@ export default function Credibilidade() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 relative z-10 border-t border-white/5">
         <p className="text-center text-white/40 text-xs font-mono tracking-[0.4em] uppercase mb-10">
-          Setores que já transformamos com IA
+          Resultados reais para operações reais
         </p>
 
         {/* Desktop: flex row */}
