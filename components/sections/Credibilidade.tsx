@@ -20,16 +20,18 @@ export default function Credibilidade() {
           Resultados reais para operações reais
         </p>
 
-        <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center sm:items-center gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
           {segments.map((segment) => {
             const Icon = segment.icon;
             return (
               <div
                 key={segment.name}
-                className="flex items-center gap-3 px-4 py-4 sm:px-6 sm:py-3.5 rounded-xl backdrop-blur-md bg-white/[0.02] border border-white/5 text-white/50 hover:text-white hover:bg-white/[0.04] hover:border-[hsl(172_85%_45%/0.3)] transition-all duration-300 cursor-default select-none shadow-[0_0_15px_transparent] hover:shadow-[0_0_20px_hsl(172_85%_45%/0.05)] hover:-translate-y-0.5 group"
+                className="rounded-2xl p-5 md:p-6 border border-white/10 bg-white/[0.03] backdrop-blur-xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 text-white/70"
               >
-                <Icon className="w-5 h-5 text-[hsl(172_85%_45%/0.6)] group-hover:text-[hsl(172_85%_45%)] transition-colors" />
-                <span className="text-xs sm:text-sm font-bold tracking-wide uppercase">
+                <div className="w-11 h-11 rounded-xl bg-[hsl(172_85%_45%/0.12)] border border-[hsl(172_85%_45%/0.25)] flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-[hsl(172_85%_45%)]" />
+                </div>
+                <span className="text-xs md:text-sm font-bold tracking-wide uppercase text-white">
                   {segment.name}
                 </span>
               </div>

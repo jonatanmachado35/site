@@ -112,16 +112,9 @@ export default function Servicos() {
               </p>
 
               {/* Features */}
-              <div className="flex flex-wrap gap-2 mb-7">
-                {service.features.slice(0, 4).map((f) => (
-                  <span
-                    key={f}
-                    className="px-3 py-1 bg-[hsl(172_85%_45%/0.12)] rounded-full text-xs text-[hsl(172_85%_60%)] font-medium border border-[hsl(172_85%_45%/0.2)]"
-                  >
-                    {f}
-                  </span>
-                ))}
-              </div>
+              <p className="text-xs text-white/70 mb-7">
+                {service.features.slice(0, 4).join(" • ")}
+              </p>
 
               <Button
                 variant="outline"

@@ -61,6 +61,7 @@ export default function Cases() {
 
   return (
     <section
+      id="cases"
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="py-24"
     >
