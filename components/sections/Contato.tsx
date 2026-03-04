@@ -72,7 +72,7 @@ export default function Contato() {
             {/* Form — 2/3 */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-                {/* Nome + Contato */}
+                {/* Nome + Email */}
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     <Label htmlFor="nome" className="text-white/70 font-medium">
@@ -93,43 +93,64 @@ export default function Contato() {
                     )}
                   </div>
                   <div className="space-y-3">
-                    <Label htmlFor="contato" className="text-white/70 font-medium">
-                      WhatsApp ou Email <span className="text-[hsl(172_85%_45%)]">*</span>
+                    <Label htmlFor="email" className="text-white/70 font-medium">
+                      Email <span className="text-[hsl(172_85%_45%)]">*</span>
                     </Label>
                     <Input
-                      id="contato"
-                      placeholder="WhatsApp ou email"
-                      {...register("contato")}
+                      id="email"
+                      type="email"
+                      placeholder="seu@email.com"
+                      {...register("email")}
                       className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.contato ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        errors.email ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
                       }`}
                     />
-                    {errors.contato && (
+                    {errors.email && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
-                        {errors.contato.message}
+                        {errors.email.message}
                       </p>
                     )}
                   </div>
                 </div>
 
-                {/* Processo */}
-                <div className="space-y-3">
-                  <Label htmlFor="processo" className="text-white/70 font-medium">
-                    Qual processo você quer automatizar?
-                  </Label>
-                  <Input
-                    id="processo"
-                    placeholder="Ex: atendimento, financeiro, suporte..."
-                    {...register("processo")}
-                    className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                      errors.processo ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                    }`}
-                  />
-                  {errors.processo && (
-                    <p className="text-red-400 text-xs mt-1 font-medium">
-                      {errors.processo.message}
-                    </p>
-                  )}
+                {/* WhatsApp + Processo */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    <Label htmlFor="whatsapp" className="text-white/70 font-medium">
+                      WhatsApp <span className="text-[hsl(172_85%_45%)]">*</span>
+                    </Label>
+                    <Input
+                      id="whatsapp"
+                      placeholder="+55 (51) 99999-9999"
+                      {...register("whatsapp")}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
+                        errors.whatsapp ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                      }`}
+                    />
+                    {errors.whatsapp && (
+                      <p className="text-red-400 text-xs mt-1 font-medium">
+                        {errors.whatsapp.message}
+                      </p>
+                    )}
+                  </div>
+                  <div className="space-y-3">
+                    <Label htmlFor="processo" className="text-white/70 font-medium">
+                      Qual processo você quer automatizar?
+                    </Label>
+                    <Input
+                      id="processo"
+                      placeholder="Ex: atendimento, financeiro, suporte..."
+                      {...register("processo")}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
+                        errors.processo ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                      }`}
+                    />
+                    {errors.processo && (
+                      <p className="text-red-400 text-xs mt-1 font-medium">
+                        {errors.processo.message}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* Submit */}

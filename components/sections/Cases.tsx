@@ -80,72 +80,28 @@ export default function Cases() {
 
         {/* Lista */}
         <div>
-          {/* Mobile — carrossel */}
-          <div className="md:hidden -mx-4 px-4">
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
-              {cases.map((c) => (
-                <div
-                  key={c.title}
-                  className="min-w-[85%] snap-center border border-white/10 bg-white/5 p-6 rounded-2xl glass-panel hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%/0.2)]">
-                      {c.sector}
-                    </span>
-                    <span className="text-xs text-white/60 font-semibold uppercase tracking-wider">
-                      {c.tag}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-xl text-white leading-tight mb-3">
-                    {c.title}
-                  </h3>
-                  <p className="text-white/60 leading-relaxed text-sm mb-4">
-                    {c.description}
-                  </p>
-                  <ul className="flex flex-col gap-2">
-                    {c.results.map((d) => (
-                      <li
-                        key={d}
-                        className="text-xs text-white/60 flex items-start gap-2"
-                      >
-                        <span className="w-1.5 h-1.5 mt-1 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop — grid 2x2 */}
-          <div className="hidden md:grid grid-cols-2 gap-6">
+          <div className="-mx-4 px-4 flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory md:mx-0 md:px-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:snap-none">
             {cases.map((c) => (
               <div
                 key={c.title}
-                className="border border-white/10 bg-white/5 p-8 rounded-2xl glass-panel hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+                className="min-w-[85%] snap-center border border-white/10 bg-white/5 p-6 md:p-8 rounded-2xl glass-panel hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 md:min-w-0"
               >
-                <div className="flex items-center justify-between mb-5">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%/0.2)]">
-                    {c.sector}
-                  </span>
-                  <span className="text-xs text-white/60 font-semibold uppercase tracking-wider">
-                    {c.tag}
-                  </span>
-                </div>
-                <h3 className="font-bold text-2xl text-white leading-tight mb-3">
+                <p className="text-xs text-white/60 font-semibold uppercase tracking-wider mb-4 md:mb-5">
+                  {c.sector} <span className="text-white/30">·</span> {c.tag}
+                </p>
+                <h3 className="font-bold text-xl md:text-2xl text-white leading-tight mb-3">
                   {c.title}
                 </h3>
-                <p className="text-white/60 leading-relaxed text-sm mb-5">
+                <p className="text-white/60 leading-relaxed text-sm mb-4 md:mb-5">
                   {c.description}
                 </p>
                 <ul className="flex flex-col gap-2">
                   {c.results.map((d) => (
                     <li
                       key={d}
-                      className="text-sm text-white/60 flex items-start gap-2"
+                      className="text-xs md:text-sm text-white/60 flex items-start gap-2"
                     >
-                      <span className="w-1.5 h-1.5 mt-2 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 mt-1 md:mt-2 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
                       {d}
                     </li>
                   ))}

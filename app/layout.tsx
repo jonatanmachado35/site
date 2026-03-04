@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Think World | Agência IA First",
+    default: "Agência IA First para Automação e Software Sob Medida | Think World",
     template: "%s | Think World",
   },
   description:
-    "Desenvolvemos software personalizado e automações com IA para empresas que querem crescer. Florianópolis, SC.",
+    "Automatize processos e reduza custos com IA aplicada ao seu negócio. Diagnóstico gratuito em até 24h.",
   keywords: [
     "agência IA",
     "desenvolvimento de software",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://thinkworld.com.br",
     siteName: "Think World",
-    title: "Think World | Agência IA First",
+    title: "Agência IA First para Automação e Software Sob Medida | Think World",
     description:
-      "Desenvolvemos software personalizado e automações com IA para empresas que querem crescer.",
+      "Automatize processos e reduza custos com IA aplicada ao seu negócio. Diagnóstico gratuito em até 24h.",
     images: [
       {
         url: "/og-image.png",
@@ -49,8 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Think World | Agência IA First",
-    description: "Desenvolvemos software personalizado e automações com IA.",
+    title: "Agência IA First para Automação e Software Sob Medida | Think World",
+    description:
+      "Automatize processos e reduza custos com IA aplicada ao seu negócio. Diagnóstico gratuito em até 24h.",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

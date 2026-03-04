@@ -1,6 +1,7 @@
 export interface ContactFormPayload {
   nome: string;
-  contato: string;
+  email: string;
+  whatsapp: string;
   processo: string;
   mensagem?: string;
 }

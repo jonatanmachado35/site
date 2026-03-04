@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "Quanto custa?",
     answer:
-      "Projetos começam em R$ 4 mil e variam conforme escopo e integrações.",
+      "A partir de R$ 4 mil (varia por escopo).",
   },
   {
     question: "Quanto tempo leva?",
