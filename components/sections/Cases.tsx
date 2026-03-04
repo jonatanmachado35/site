@@ -1,43 +1,60 @@
 "use client";
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { Lock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const cases = [
   {
-    tag: "Automação com IA",
-    fullTitle: "Agente de Atendimento no WhatsApp",
+    sector: "Clínica de odontologia",
+    title: "Fluxo de atendimento inteligente",
     description:
-      "Desenvolvemos um agente de IA integrado ao WhatsApp para automatizar o agendamento de consultas, enviar notificações de confirmação e lembretes antes do atendimento, além de mensagens de pós-atendimento — tudo de forma autônoma, sem intervenção humana.",
-    details: [
-      "Agendamento automático via conversa no WhatsApp",
-      "Notificações de confirmação e lembretes",
-      "Mensagens automáticas de pós-atendimento",
-      "Integração com agenda e sistema do cliente",
+      "Simplificamos o fluxo de atendimento e eliminamos tarefas repetitivas de busca, confirmação e reagendamento. A equipe passou a focar no paciente com muito mais eficiência no dia a dia.",
+    results: [
+      "Redução do trabalho manual",
+      "Aumento de produtividade em 80%",
     ],
-    resultNumber: "80%",
-    resultLabel: "das consultas agendadas sem intervenção humana",
-    isReal: true,
+    tag: "Saúde",
   },
   {
-    tag: "Desenvolvimento Web",
-    fullTitle: "Case em breve",
-    description: "Estamos preparando os detalhes deste case. Em breve disponível.",
-    details: [],
-    resultNumber: "—",
-    resultLabel: "",
-    isReal: false,
+    sector: "Aluguel de casas por temporada",
+    title: "Gestão de locação transparente",
+    description:
+      "Unificamos o processo de locação em um fluxo simples e descentralizado, dando mais visibilidade a todas as etapas. A gestão ficou clara para proprietários e operadores.",
+    results: [
+      "Processo unificado e mais simples",
+      "Maior transparência dos lucros para todos os envolvidos",
+    ],
+    tag: "Imobiliário",
   },
   {
-    tag: "Desenvolvimento Web",
-    fullTitle: "Case em breve",
-    description: "Estamos preparando os detalhes deste case. Em breve disponível.",
-    details: [],
-    resultNumber: "—",
-    resultLabel: "",
-    isReal: false,
+    sector: "Controle financeiro",
+    title: "Portal + assistente via WhatsApp",
+    description:
+      "Criamos um portal com informações e gráficos centralizados e integrados a um assistente conversacional via WhatsApp. Assim, o registro de gastos ficou rápido e acessível.",
+    results: [
+      "Visualização clara de indicadores financeiros",
+      "Registro de despesas direto pelo WhatsApp com IA",
+    ],
+    tag: "Finanças",
+  },
+  {
+    sector: "Clínica veterinária",
+    title: "Triagem com apoio de IA",
+    description:
+      "Implementamos um assistente de IA que interpreta exames e cruza dados com histórico de consultas para apoiar o pré‑diagnóstico. A triagem ficou mais ágil e consistente.",
+    results: [
+      "Pré‑diagnóstico apoiado por IA",
+      "Integração entre exames e histórico clínico",
+    ],
+    tag: "Saúde Animal",
   },
 ];
+
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
 
 export default function Cases() {
   const sectionRef = useScrollReveal();
@@ -63,83 +80,97 @@ export default function Cases() {
 
         {/* Lista */}
         <div>
-          {cases.map((c, i) =>
-            c.isReal ? (
-              // Case real — layout completo
-              <div
-                key={i}
-                className="grid md:grid-cols-[1fr_2fr_1fr] gap-6 md:gap-10 items-center border border-white/10 bg-white/5 py-10 mb-6 px-8 hover:bg-white/[0.03] rounded-2xl transition-colors glass-panel"
-              >
-                {/* Col 1 — tag + título */}
-                <div>
-                  <span className="inline-flex px-3 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] text-[hsl(172_85%_45%)] text-xs font-semibold mb-3">
-                    {c.tag}
-                  </span>
-                  <h3 className="font-bold text-xl text-white leading-tight">
-                    {c.fullTitle}
+          {/* Mobile — carrossel */}
+          <div className="md:hidden -mx-4 px-4">
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory">
+              {cases.map((c) => (
+                <div
+                  key={c.title}
+                  className="min-w-[85%] snap-center border border-white/10 bg-white/5 p-6 rounded-2xl glass-panel hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%/0.2)]">
+                      {c.sector}
+                    </span>
+                    <span className="text-xs text-white/60 font-semibold uppercase tracking-wider">
+                      {c.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-xl text-white leading-tight mb-3">
+                    {c.title}
                   </h3>
-                </div>
-
-                {/* Col 2 — descrição + detalhes */}
-                <div>
-                  <p className="text-white/60 leading-relaxed mb-3 text-sm">
+                  <p className="text-white/60 leading-relaxed text-sm mb-4">
                     {c.description}
                   </p>
-                  <ul className="flex flex-col gap-1">
-                    {c.details.map((d) => (
+                  <ul className="flex flex-col gap-2">
+                    {c.results.map((d) => (
                       <li
                         key={d}
-                        className="text-xs text-white/50 flex items-center gap-2"
+                        className="text-xs text-white/60 flex items-start gap-2"
                       >
-                        <span className="w-1 h-1 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 mt-1 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
                         {d}
                       </li>
                     ))}
                   </ul>
                 </div>
+              ))}
+            </div>
+          </div>
 
-                {/* Col 3 — resultado */}
-                <div className="flex flex-col items-start md:items-end">
-                  <p
-                    className="font-black text-[hsl(172_85%_45%)] leading-none"
-                    style={{ fontSize: "clamp(2.5rem, 4vw, 3.5rem)" }}
-                  >
-                    {c.resultNumber}
-                  </p>
-                  <p className="text-white/50 text-sm mt-1 md:text-right leading-snug max-w-[160px]">
-                    {c.resultLabel}
-                  </p>
-                </div>
-              </div>
-            ) : (
-              // Case "em breve" — visual diferenciado
+          {/* Desktop — grid 2x2 */}
+          <div className="hidden md:grid grid-cols-2 gap-6">
+            {cases.map((c) => (
               <div
-                key={i}
-                className="grid md:grid-cols-[1fr_2fr_1fr] gap-6 md:gap-10 items-center border border-white/10 bg-white/5 py-10 mb-6 px-8 rounded-2xl opacity-50 glass-panel"
+                key={c.title}
+                className="border border-white/10 bg-white/5 p-8 rounded-2xl glass-panel hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
               >
-                <div>
-                  <span className="inline-flex px-3 py-1 rounded-full bg-white/10 text-white/60 text-xs font-semibold mb-3">
+                <div className="flex items-center justify-between mb-5">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%/0.2)]">
+                    {c.sector}
+                  </span>
+                  <span className="text-xs text-white/60 font-semibold uppercase tracking-wider">
                     {c.tag}
                   </span>
-                  <div className="flex items-center gap-2">
-                    <Lock className="w-4 h-4 text-white/50" />
-                    <h3 className="font-bold text-lg text-white/50 leading-tight">
-                      {c.fullTitle}
-                    </h3>
-                  </div>
                 </div>
-                <p className="text-white/40 text-sm italic">
+                <h3 className="font-bold text-2xl text-white leading-tight mb-3">
+                  {c.title}
+                </h3>
+                <p className="text-white/60 leading-relaxed text-sm mb-5">
                   {c.description}
                 </p>
-                <div className="flex flex-col items-start md:items-end">
-                  <p className="font-black text-white/20 text-5xl leading-none">
-                    {c.resultNumber}
-                  </p>
-                </div>
+                <ul className="flex flex-col gap-2">
+                  {c.results.map((d) => (
+                    <li
+                      key={d}
+                      className="text-sm text-white/60 flex items-start gap-2"
+                    >
+                      <span className="w-1.5 h-1.5 mt-2 rounded-full bg-[hsl(172_85%_45%)] flex-shrink-0" />
+                      {d}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            )
-          )}
+            ))}
+          </div>
         </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-10">
+          <Button
+            size="lg"
+            onClick={() => scrollToSection("contato")}
+            className="bg-[hsl(172_85%_45%)] hover:bg-[hsl(172_85%_40%)] text-[hsl(240_15%_9%)] font-bold text-base sm:text-lg py-5 px-10 h-auto hover:scale-105 active:scale-95 transition-all duration-200 shadow-[0_0_40px_hsl(172_85%_45%/0.35)]"
+          >
+            Falar com especialista
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
+
+        {/* Nota discreta */}
+        <p className="text-center text-white/40 text-xs mt-6 italic">
+          Casos reais. Identidades preservadas por confidencialidade.
+        </p>
       </div>
     </section>
   );
