@@ -52,7 +52,7 @@ export default function Contato() {
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[hsl(172_85%_45%)]/10 text-[hsl(172_85%_45%)] text-xs font-semibold uppercase tracking-wider border border-[hsl(172_85%_45%)]/20 mb-6">
             <Sparkles className="w-3.5 h-3.5 mr-2" />
-            Vamos entender seu desafio
+            Diagnóstico gratuito
           </span>
           <h2
             className="font-bold leading-[1.1] text-white"
@@ -61,14 +61,14 @@ export default function Contato() {
             Vamos entender seu desafio
           </h2>
           <p className="mt-6 text-white/60 max-w-2xl mx-auto text-lg leading-relaxed">
-            Preencha o formulário abaixo para receber um diagnóstico inicial.
+            Conta o que está travando sua operação. Em até 24h você recebe um diagnóstico inicial — sem compromisso.
           </p>
         </div>
 
         {/* Glass Panel */}
-            <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
-              <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
-            
+        <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
+
             {/* Form — 2/3 */}
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
@@ -82,9 +82,8 @@ export default function Contato() {
                       id="nome"
                       placeholder="Seu nome completo"
                       {...register("nome")}
-                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.nome ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                      }`}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${errors.nome ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        }`}
                     />
                     {errors.nome && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
@@ -101,9 +100,8 @@ export default function Contato() {
                       type="email"
                       placeholder="seu@email.com"
                       {...register("email")}
-                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.email ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                      }`}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${errors.email ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        }`}
                     />
                     {errors.email && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
@@ -123,9 +121,8 @@ export default function Contato() {
                       id="whatsapp"
                       placeholder="+55 (51) 99999-9999"
                       {...register("whatsapp")}
-                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.whatsapp ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                      }`}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${errors.whatsapp ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        }`}
                     />
                     {errors.whatsapp && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
@@ -141,9 +138,8 @@ export default function Contato() {
                       id="processo"
                       placeholder="Ex: atendimento, financeiro, suporte..."
                       {...register("processo")}
-                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${
-                        errors.processo ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
-                      }`}
+                      className={`bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-[hsl(172_85%_45%)] focus-visible:border-[hsl(172_85%_45%)] rounded-xl h-14 px-4 ${errors.processo ? "border-red-500 focus-visible:ring-red-500 focus-visible:border-red-500" : ""
+                        }`}
                     />
                     {errors.processo && (
                       <p className="text-red-400 text-xs mt-1 font-medium">
@@ -197,7 +193,7 @@ export default function Contato() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-5 group">
                     <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-[hsl(172_85%_45%)]/50 group-hover:shadow-[0_0_20px_hsl(172_85%_45%/0.2)] transition-all duration-300">
                       <Phone className="w-6 h-6 text-[hsl(172_85%_45%)]" />
@@ -205,11 +201,11 @@ export default function Contato() {
                     <div className="pt-1">
                       <p className="text-sm text-white/50 font-medium mb-1.5 uppercase tracking-wide">WhatsApp</p>
                       <p className="text-base font-semibold text-white">
-                        +55 (51) 99133-4348
+                        +55 (51) 99447-2418
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-5 group">
                     <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-[hsl(172_85%_45%)]/50 group-hover:shadow-[0_0_20px_hsl(172_85%_45%/0.2)] transition-all duration-300">
                       <MapPin className="w-6 h-6 text-[hsl(172_85%_45%)]" />
@@ -217,7 +213,7 @@ export default function Contato() {
                     <div className="pt-1">
                       <p className="text-sm text-white/50 font-medium mb-1.5 uppercase tracking-wide">Localização</p>
                       <p className="text-base font-semibold text-white">
-                        Florianópolis, SC
+                        Porto Alegre, RS
                       </p>
                     </div>
                   </div>
@@ -240,7 +236,7 @@ export default function Contato() {
                     Retorno em menos de <strong className="text-white">24h</strong>.
                   </p>
                   <a
-                    href="https://wa.me/5551991334348"
+                    href="https://wa.me/5551994472418"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex w-full"

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Política de Privacidade da Think World — como coletamos, usamos e protegemos seus dados.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://thinkworld.com.br/privacidade" },
 };
 
 export default function PrivacidadePage() {
@@ -47,7 +48,7 @@ export default function PrivacidadePage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">1. Quem somos</h2>
             <p className="text-muted-foreground leading-relaxed">
-              A <strong>Think World</strong> é uma agência especializada em Inteligência Artificial e desenvolvimento de software, com sede em Florianópolis, SC, Brasil. CNPJ: <strong>62.053.055/0001-17</strong>. Para fins desta Política, somos o <strong>Controlador</strong> dos dados pessoais coletados em nosso site <strong>thinkworld.com.br</strong>.
+              A <strong>Think World</strong> é uma agência especializada em Inteligência Artificial e desenvolvimento de software, com sede em Porto Alegre, RS, Brasil. CNPJ: <strong>62.053.055/0001-17</strong>. Para fins desta Política, somos o <strong>Controlador</strong> dos dados pessoais coletados em nosso site <strong>thinkworld.com.br</strong>.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-3">
               Dúvidas sobre privacidade: <a href="mailto:contato@thinkworld.com.br" className="text-primary hover:underline">contato@thinkworld.com.br</a>
@@ -155,7 +156,7 @@ export default function PrivacidadePage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">11. Contato</h2>
             <p className="text-muted-foreground leading-relaxed">
               Think World — Agência IA First<br />
-              Florianópolis, SC, Brasil<br />
+              Porto Alegre, RS, Brasil<br />
               E-mail: <a href="mailto:contato@thinkworld.com.br" className="text-primary hover:underline">contato@thinkworld.com.br</a><br />
               Instagram: <a href="https://instagram.com/thinkworldbr" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">@thinkworldbr</a>
             </p>

@@ -96,7 +96,7 @@ export default async function Image() {
               maxWidth: "800px",
             }}
           >
-            Software personalizado e automações com IA — Florianópolis, SC
+            Software personalizado e automações com IA — Porto Alegre, RS
           </p>
         </div>
 

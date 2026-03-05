@@ -8,18 +8,21 @@ const steps = [
     title: "Diagnóstico gratuito",
     description:
       "Entendemos seu processo atual, dores e impacto financeiro.",
+    duration: "Até 24h",
   },
   {
     number: "02",
     title: "Plano de automação",
     description:
       "Definimos o que será automatizado e o ganho esperado.",
+    duration: "2–3 dias",
   },
   {
     number: "03",
     title: "Entrega e acompanhamento",
     description:
       "Implementamos, treinamos seu time e monitoramos resultados.",
+    duration: "2–8 semanas",
   },
 ];
 
@@ -62,10 +65,15 @@ export default function Processo() {
                 </div>
 
                 {/* Conteúdo */}
-                <div className="pt-1.5">
-                  <h3 className="font-bold text-xl text-white mb-2">
-                    {step.title}
-                  </h3>
+                <div className="pt-1.5 flex-1">
+                  <div className="flex items-center justify-between gap-4 mb-2">
+                    <h3 className="font-bold text-xl text-white">
+                      {step.title}
+                    </h3>
+                    <span className="flex-shrink-0 px-2.5 py-1 rounded-full bg-[hsl(172_85%_45%/0.1)] border border-[hsl(172_85%_45%/0.2)] text-[hsl(172_85%_55%)] text-[11px] font-mono font-semibold tracking-wide">
+                      {step.duration}
+                    </span>
+                  </div>
                   <p className="text-white/60 leading-relaxed">
                     {step.description}
                   </p>
@@ -74,19 +82,19 @@ export default function Processo() {
             ))}
           </div>
 
-            {/* Card de impacto */}
-            <div className="glass-panel rounded-2xl p-8 flex flex-col items-center text-center justify-center">
-              <p
-                className="font-black text-[hsl(172_85%_45%)] leading-none mb-3"
-                style={{ fontSize: "5rem" }}
-              >
-                95%
-              </p>
-              <p className="text-white/60 leading-relaxed text-base">
+          {/* Card de impacto */}
+          <div className="glass-panel rounded-2xl p-8 flex flex-col items-center text-center justify-center">
+            <p
+              className="font-black text-[hsl(172_85%_45%)] leading-none mb-3"
+              style={{ fontSize: "5rem" }}
+            >
+              95%
+            </p>
+            <p className="text-white/60 leading-relaxed text-base">
               dos clientes voltam
               <br />
               para novos projetos
-              </p>
+            </p>
 
             {/* Linha decorativa */}
             <div className="w-12 h-px bg-[hsl(172_85%_45%/0.4)] my-6" />

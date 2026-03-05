@@ -20,13 +20,26 @@ export default function Credibilidade() {
           Resultados reais para operações reais
         </p>
 
-        <div className="max-w-3xl mx-auto mb-10 text-center">
-          <p className="text-white/70 italic text-sm sm:text-base">
-            “Automatizamos 70% do atendimento em 30 dias.”
-          </p>
-          <p className="text-white/40 text-xs mt-2">
-            — Diretor de Operações, E‑commerce
-          </p>
+        {/* Métricas reais */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/[0.06] rounded-2xl overflow-hidden mb-12 max-w-3xl mx-auto">
+          {[
+            { value: "70%", label: "menos retrabalho" },
+            { value: "80%", label: "mais produtividade" },
+            { value: "95%", label: "taxa de retenção" },
+            { value: "30+", label: "projetos entregues" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-col items-center justify-center gap-1 py-6 px-4 bg-[#050508]"
+            >
+              <span className="text-2xl sm:text-3xl font-black text-[hsl(172_85%_50%)] leading-none">
+                {stat.value}
+              </span>
+              <span className="text-[11px] text-white/40 font-medium text-center leading-tight">
+                {stat.label}
+              </span>
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 sm:gap-4">

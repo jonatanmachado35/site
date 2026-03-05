@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Termos de Uso",
   description: "Termos de Uso do site da Think World.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "https://thinkworld.com.br/termos" },
 };
 
 export default function TermosPage() {
@@ -54,7 +55,7 @@ export default function TermosPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">2. Sobre a Think World</h2>
             <p className="text-muted-foreground leading-relaxed">
-              A <strong>Think World</strong> é uma agência especializada em Inteligência Artificial e desenvolvimento de software com sede em Florianópolis, SC, Brasil. Este site é um canal de apresentação institucional e captação de clientes.
+              A <strong>Think World</strong> é uma agência especializada em Inteligência Artificial e desenvolvimento de software com sede em Porto Alegre, RS, Brasil. Este site é um canal de apresentação institucional e captação de clientes.
             </p>
           </section>
 
@@ -118,7 +119,7 @@ export default function TermosPage() {
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-4">10. Lei aplicável e foro</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Estes Termos são regidos pelas leis da República Federativa do Brasil. Para dirimir quaisquer controvérsias, fica eleito o foro da Comarca de Florianópolis, SC, com exclusão de qualquer outro, por mais privilegiado que seja.
+              Estes Termos são regidos pelas leis da República Federativa do Brasil. Para dirimir quaisquer controvérsias, fica eleito o foro da Comarca de Porto Alegre, RS, com exclusão de qualquer outro, por mais privilegiado que seja.
             </p>
           </section>
 
@@ -133,7 +134,7 @@ export default function TermosPage() {
             <h2 className="text-2xl font-bold text-foreground mb-4">12. Contato</h2>
             <p className="text-muted-foreground leading-relaxed">
               Think World — Agência IA First<br />
-              Florianópolis, SC, Brasil<br />
+              Porto Alegre, RS, Brasil<br />
               E-mail: <a href="mailto:contato@thinkworld.com.br" className="text-primary hover:underline">contato@thinkworld.com.br</a>
             </p>
           </section>

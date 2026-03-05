@@ -1,6 +1,6 @@
 "use client";
 
-import { Sheet, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, X, Zap } from "lucide-react";
 
@@ -41,6 +41,7 @@ export default function ServiceSheet({
         showCloseButton={false}
         className="w-full sm:w-[500px] sm:max-w-[500px] overflow-y-auto border-l border-white/[0.06] bg-[#07070d] p-0 flex flex-col"
       >
+        <SheetTitle className="sr-only">Detalhes do serviço</SheetTitle>
         {/* Accent top bar */}
         <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[hsl(172_85%_45%)] to-transparent flex-shrink-0" />
 

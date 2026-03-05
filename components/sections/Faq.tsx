@@ -6,22 +6,32 @@ const faqs = [
   {
     question: "Quanto custa?",
     answer:
-      "A partir de R$ 4 mil (varia por escopo).",
+      "Projetos iniciais partem de R$ 4 mil. O valor final depende do escopo — automações simples ficam nessa faixa, sistemas mais complexos variam. No diagnóstico gratuito já conseguimos dar uma estimativa real para o seu caso.",
   },
   {
     question: "Quanto tempo leva?",
     answer:
-      "Soluções iniciais podem sair em semanas, dependendo da complexidade.",
+      "Automações e integrações costumam sair em 2 a 4 semanas. Sistemas web e dashboards levam de 4 a 8 semanas. O diagnóstico já define um prazo concreto para o seu projeto.",
   },
   {
     question: "Preciso já ter dados organizados?",
     answer:
-      "Não. Ajudamos a organizar e integrar os dados necessários.",
+      "Não. Faz parte do nosso trabalho mapear, organizar e integrar os dados existentes. Você não precisa chegar com nada pronto — chegue com o problema.",
   },
   {
     question: "Isso substitui meu time?",
     answer:
-      "Não. A automação libera o time para focar no que gera mais valor.",
+      "Não. A automação elimina as tarefas repetitivas e operacionais, liberando seu time para focar no que realmente gera valor. Menos retrabalho, mais resultado.",
+  },
+  {
+    question: "E se eu não gostar do resultado?",
+    answer:
+      "Trabalhamos em ciclos com validações constantes — você aprova cada etapa antes de avançar. Não entregamos tudo no final e esperamos um 'ok'. Se algo não estiver certo, ajustamos.",
+  },
+  {
+    question: "Vocês dão suporte depois da entrega?",
+    answer:
+      "Sim. Todo projeto inclui um período de acompanhamento pós-entrega. Para clientes que querem suporte contínuo, temos planos de manutenção e evolução mensal.",
   },
 ];
 

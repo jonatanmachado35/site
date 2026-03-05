@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MobileCtaBar from "@/components/shared/MobileCtaBar";
 import Hero from "@/components/sections/Hero";
 import Credibilidade from "@/components/sections/Credibilidade";
 import PropostaValor from "@/components/sections/PropostaValor";
@@ -21,11 +22,12 @@ export default function Home() {
         <Servicos />
         <Processo />
         <Cases />
-        <CtaFinal />
         <Faq />
+        <CtaFinal />
         <Contato />
       </main>
       <Footer />
+      <MobileCtaBar />
     </>
   );
 }

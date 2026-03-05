@@ -30,7 +30,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Agência IA First — Florianópolis, SC
+              Agência IA First — Porto Alegre, RS
             </p>
             <div className="flex flex-col gap-2 text-sm text-white/60 mb-6">
               <div className="flex items-center gap-2">
@@ -39,11 +39,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[hsl(172_85%_45%)]" />
-                <span>+55 (51) 99133-4348</span>
+                <span>+55 (51) 99447-2418</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-[hsl(172_85%_45%)]" />
-                <span>Florianópolis, SC</span>
+                <span>Porto Alegre, RS</span>
               </div>
             </div>
             <Link
